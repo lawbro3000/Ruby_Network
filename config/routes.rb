@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :network2s
 
   # map.resources :professional
-get 'logout' => 'professional#logout'
+  get 'logout' => 'professional#logout'
   get 'professional/index'
 
   get 'professional/show' => 'professional#show'
@@ -13,12 +13,16 @@ get 'logout' => 'professional#logout'
 
   get "/remove/:id" => 'professional#remove'
 
-get "/ignore/:id" => 'professional#ignore'
+  get "/ignore/:id" => 'professional#ignore'
+  
   get '/' => 'users#index'
+  
+  get "/professional/:id"  => 'professional#showUser'
 
   post 'users/register'
 
   post 'users/login'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

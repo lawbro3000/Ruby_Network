@@ -63,5 +63,9 @@ class ProfessionalController < ApplicationController
     redirect_to '/professional/show'
   end
 
-
+  def showUser
+    @alluser = User2.find_by(id:params[:id])
+    #puts @alluser
+  end
 end
+

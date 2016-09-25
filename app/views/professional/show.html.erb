@@ -3,7 +3,7 @@
 <% for user in @alluser %>
 
 
-      <p><%= user.name %> <a href="/connecting/<%=user.id%>">Connect</a> </p>
+      <p><a href="/professional/<%=user.id%>"><%= user.name %></a> <a href="/connecting/<%=user.id%>">Connect</a> </p>
 
 
 <% end %>

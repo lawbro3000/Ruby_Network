@@ -13,24 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20160924213823) do
 
-  create_table "network2s", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "networkee_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "networkings", force: true do |t|
     t.integer  "user_id"
     t.integer  "network_connection_id"
     t.string   "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "networks", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "connection_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,15 +26,6 @@ ActiveRecord::Schema.define(version: 20160924213823) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "Description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.text     "Description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
